@@ -1,11 +1,16 @@
-# Prospera Repository Structure Standard
+Prospera Repository Structure Standard
 
-Document Status: Stable
 Document Type: Repository Architecture Standard
-Authority: Prospera Governance Core
+Document Status: Stable
 Version: 1.0
 
----
+Owner: Prospera Governance Core
+Maintained by: Prospera Architecture Authority
+Authoring Team: Prospera Platform Engineering
+
+Created: 2025-11
+Last Updated: 2025-11
+
 
 # 1 Purpose
 
