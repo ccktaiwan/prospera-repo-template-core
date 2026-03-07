@@ -6,97 +6,110 @@ Template Version: 1.0
 
 ---
 
-# 1 Introduction
+# 1 Overview
 
-This document defines the component model for
-repositories derived from the Prospera Core
-Repository Template.
+This document defines the component architecture
+for repositories created from the Prospera
+Core Repository Template.
 
 The component model describes how the internal
-system is divided into logical components and
-how those components interact.
+system is decomposed into logical components
+and how these components interact.
 
-A clear component model ensures that the
-system architecture remains modular, maintainable,
-and extensible.
-
----
-
-# 2 Component Architecture
-
-A repository may contain multiple internal
-components.
-
-Each component represents a logical module
-responsible for a defined capability within
-the system.
-
-Components should follow these design rules.
-
-Single responsibility
-Explicit interfaces
-Clear dependency boundaries
+A well defined component model improves
+modularity, maintainability, and long-term
+system evolution.
 
 ---
 
-# 3 Component Definition Structure
+# 2 Architectural Context
 
-Each component should be described using
-the following structure.
+The component architecture exists within the
+broader system architecture defined in
+ARCHITECTURE.md and SYSTEM_CONTEXT.md.
+
+Architecture layers:
+
+System Context
+Component Architecture
+Runtime Behaviour
+
+The component model focuses specifically on
+the internal structural decomposition of the
+repository.
+
+---
+
+# 3 Component Definition
+
+A component represents a logical unit of
+functionality responsible for a specific
+system capability.
+
+Each component should be defined using the
+following structure.
 
 Component Name
 Component Purpose
 Responsibilities
-External Interfaces
+Interfaces
 Dependencies
 
 This structure ensures that each component
-remains well defined and understandable.
+has a clearly defined role within the system.
 
 ---
 
 # 4 Component Responsibilities
 
-Component responsibilities should define the
-core functions of each module.
+Component responsibilities define the scope
+of functionality owned by each component.
 
 Responsibilities may include:
 
-Data processing
-State management
-Service coordination
-External system integration
+processing logic
+state management
+service coordination
+external integration
 
-Component responsibilities should not overlap.
+Component responsibilities must remain
+well separated to avoid overlapping
+functional domains.
 
 ---
 
 # 5 Component Interfaces
 
-Components interact through defined interfaces.
+Components interact through explicit
+interfaces.
 
-Interfaces may include:
+Interface definitions may include:
 
-Internal APIs
-Event interfaces
-Data exchange contracts
+function interfaces
+service APIs
+event contracts
+data exchange structures
 
-Interfaces must remain stable to ensure
-system reliability.
+Interfaces must be stable and documented
+to ensure reliable interaction between
+components.
 
 ---
 
 # 6 Component Dependencies
 
 Components may depend on other internal
-components.
+or external modules.
 
-Dependencies should follow these rules.
+Dependency rules include:
 
-Dependencies must be explicit
-Circular dependencies must be avoided
-Dependencies must follow the Prospera
-system dependency map.
+dependencies must be explicit
+circular dependencies must be avoided
+dependencies should follow architecture
+layering principles
+
+Clear dependency structures help maintain
+system stability and reduce coupling.
 
 ---
 
@@ -104,45 +117,46 @@ system dependency map.
 
 Each component should define its lifecycle.
 
-Lifecycle stages may include:
+Typical lifecycle stages include:
 
-Initialization
-Runtime execution
-Shutdown and cleanup
+initialization
+runtime execution
+shutdown and cleanup
 
 Lifecycle definitions ensure predictable
-system behaviour.
+system behaviour across environments.
 
 ---
 
 # 8 Fault Isolation
 
-Components should be designed to isolate faults.
+Components should isolate failures whenever
+possible.
 
-Fault isolation mechanisms may include:
+Fault isolation strategies may include:
 
-Error boundaries
-Retry mechanisms
-Fallback strategies
+error boundaries
+retry strategies
+fallback mechanisms
 
-This prevents localized failures from
-propagating through the entire system.
+Fault isolation prevents localized failures
+from affecting the entire system.
 
 ---
 
 # 9 Extensibility
 
-The component model should support future
+Component architecture should support future
 system evolution.
 
-Extensibility may include:
+Extensibility mechanisms may include:
 
-Plugin mechanisms
-Modular replacement of components
-Extension interfaces
+plugin interfaces
+modular component replacement
+extension points
 
-This allows the system architecture to
-adapt as requirements evolve.
+These mechanisms enable the architecture to
+adapt as system requirements grow.
 
 ---
 
