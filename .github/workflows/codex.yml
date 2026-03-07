@@ -1,0 +1,11 @@
+name: Prospera Codex Validation
+
+on:
+  push:
+  pull_request:
+
+jobs:
+
+  codex-validation:
+
+    uses: ccktaiwan/prospera-ci-shared/.github/workflows/codex.yml@main
